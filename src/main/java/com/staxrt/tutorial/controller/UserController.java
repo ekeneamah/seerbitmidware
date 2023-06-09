@@ -80,6 +80,7 @@ public class UserController {
    */
   @PostMapping("/users")
   public User createUser(@Valid @RequestBody User user) {
+    user.getFirstName();
     return userRepository.save(user);
   }
 
